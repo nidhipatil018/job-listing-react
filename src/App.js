@@ -33,7 +33,7 @@ export default () => {
    
  const fetchJobsCustom = async (jobSearch) => {
     setLoading(true);
-    setCustomSeacrh(true);
+    setCustomSearch(true);
     const req = await firestore
     .collection("jobs")
     .orderBy("postedOn", "desc")
@@ -87,7 +87,7 @@ return (
              </Box>
              ) : (
                <>
-               { customSeacrh && (
+               { customSearch && (
                    <Box>
                    <Button onClick={fetchJobs}>
                    <CloseIcon size ={20} />
